@@ -84,7 +84,7 @@ This repository contains problem statements, digital forensic evidence, custom s
 
 ## 💻 Tech Stack & Tooling
 
-* **Digital Forensics:** Autopsy, Volatility 3, UAC (Unix-like Artifact Collector), KAPE, Registry Explorer, Event Viewer.
-* **Reverse Engineering:** Ghidra, JADX, IDA Pro, Python (`pypdfium2`, `scapy`, `pycryptodome`).
-* **Cryptanalysis:** `bkcrack`, Hashcat, CyberChef, Web3.py.
-* **Vehicle & Drone Telemetry:** PX4 ULog Tools, PlotJuggler, MAVLink Inspector.
+* **Digital Forensics:** UAC (Unix-like Artifact Collector), Registry Explorer, Event Viewer.
+* **Reverse Engineering:** Ghidra, JADX, Python (`pypdfium2`, `scapy`, `pycryptodome`).
+* **Cryptanalysis:** `bkcrack`, CyberChef, Web3.py.
+* **Vehicle & Drone Telemetry:** PX4 ULog Tools.
