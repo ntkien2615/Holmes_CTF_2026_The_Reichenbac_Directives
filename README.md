@@ -1,92 +1,90 @@
-# Holmes CTF 2026 — DFIR Sherlocks & Investigations
+# Holmes CTF 2026 — DFIR Sherlocks & Incident Investigations
 
-Repository lưu trữ tài liệu đề bài, bằng chứng số (evidence), các kịch bản phân tích/giải mã (DFIR solve scripts) và tài liệu giải trình chi tiết (**Writeups**) cho các thử thách điều tra số (**Sherlocks**) tại kỳ thi **Holmes CTF 2026** (Hack The Box).
+This repository contains problem statements, digital forensic evidence, custom solve/analysis scripts, and in-depth incident response **Writeups** for the digital forensics challenges (**Sherlocks**) from **Holmes CTF 2026** hosted by Hack The Box.
 
 ---
 
-## 🏆 Chứng chỉ hoàn thành (Certificate of Completion)
+## 🏆 Certificate of Completion
 
 <p align="center">
   <a href="./assets/Certificate-MeoBoCute.pdf" target="_blank">
-    <img src="./assets/certificate.png" alt="Holmes CTF 2026 Certificate" width="850">
+    <img src="./assets/certificate.png" alt="Holmes CTF 2026 Certificate - MeoBoCute" width="850">
   </a>
   <br>
-  <em>🎓 Chứng chỉ chứng nhận hoàn thành Holmes CTF 2026 — Nhấn vào ảnh hoặc <a href="./assets/Certificate-MeoBoCute.pdf">tại đây</a> để xem file PDF gốc.</em>
+  <em>🎓 Certificate of Completion — Holmes CTF 2026. Click the certificate image or <a href="./assets/Certificate-MeoBoCute.pdf">here</a> to view the original PDF.</em>
 </p>
 
 ---
 
-## 📌 Tổng quan các thử thách (Sherlocks Overview)
+## 📌 Sherlocks Overview
 
-| Thử thách (Folder) | Sherlock # | Thể loại (Category) | Trạng thái | Tài liệu Writeup | Bằng chứng / Scripts |
+| Challenge (Directory) | Sherlock # | Category | Status | Detailed Writeup | Key Artifacts & Solvers |
 | :--- | :---: | :--- | :---: | :--- | :--- |
-| **[SilentDividend](./SilentDividend/)** | `01` | Malware Analysis / Web3 Forensics | ✅ Hoàn thành (10/10) | [writeup.md](./SilentDividend/writeup.md) | `X0_Contract.sol`, `DANGER.txt` |
-| **[PaperGhost](./PaperGhost/)** | `04` | Windows Triage / Event Log Forensics | ✅ Hoàn thành | [writeup.md](./PaperGhost/writeup.md) | `Triage/` (Windows Artifacts) |
-| **[PoisonedBranch](./PoisonedBranch/)** | `05` | Git Supply Chain / Linux DFIR | ✅ Hoàn thành | [writeup.md](./PoisonedBranch/writeup.md) | `LOOT.zip`, `moran_id_rsa`, `decrypted_loot/` |
-| **[SilentPassenger](./SilentPassenger/)** | `06` | Android & Automotive IVI Forensics | ✅ Hoàn thành (20/20) | [writeup.md](./SilentPassenger/writeup.md) | `verify_all_20.py`, `extracted/` |
-| **[IronFeather](./IronFeather/)** | `07` | Drone Forensics / PX4 Autopilot ULog | ✅ Hoàn thành | [writeup.md](./IronFeather/writeup.md) | `calc_distance.py`, `find_crash.py` |
+| **[SilentDividend](./SilentDividend/)** | `01` | Malware Analysis / Web3 Forensics | ✅ Completed (10/10) | [writeup.md](./SilentDividend/writeup.md) | `X0_Contract.sol`, `DANGER.txt` |
+| **[PaperGhost](./PaperGhost/)** | `04` | Windows Triage / Event Log Forensics | ✅ Completed | [writeup.md](./PaperGhost/writeup.md) | `Triage/` (Windows Artifacts) |
+| **[PoisonedBranch](./PoisonedBranch/)** | `05` | Git Supply Chain / Linux DFIR | ✅ Completed | [writeup.md](./PoisonedBranch/writeup.md) | `LOOT.zip`, `moran_id_rsa`, `decrypted_loot/` |
+| **[SilentPassenger](./SilentPassenger/)** | `06` | Android & Automotive IVI Forensics | ✅ Completed (20/20) | [writeup.md](./SilentPassenger/writeup.md) | `verify_all_20.py`, `extracted/` |
+| **[IronFeather](./IronFeather/)** | `07` | Drone Forensics / PX4 Autopilot ULog | ✅ Completed | [writeup.md](./IronFeather/writeup.md) | `calc_distance.py`, `find_crash.py` |
 
 ---
 
-## 🔍 Tóm tắt phương pháp & Kết quả điều tra (Technical Summaries)
+## 🔍 Investigation Summaries & Methodologies
 
 ### 1. Sherlock 01 — Silent Dividend (`SilentDividend`)
-* **Bối cảnh:** Bác sĩ Watson mất tích sau khi điều tra các vụ tống tiền bí ẩn liên quan ứng dụng thanh toán TrustSettle.
-* **Kỹ thuật điều tra:**
-  * Giải nén gói cài đặt NSIS/Electron (`TrustSettle 1.0.0.exe`).
-  * Phân tích luồng thực thi Lua script theo dõi biến động thư mục qua API `FILE_NOTIFY_INFORMATION` và `WinHttpSendRequest`.
-  * Tương tác và dịch ngược hợp đồng thông minh `X0_Contract.sol` trên Ethereum/Polygon, gọi hàm `resolveState()` để khôi phục khóa giải mã.
-  * Phân tích file HTML lừa đảo giả mạo ví Web3 (`BrowserProvider`), trích xuất giao dịch `approve()` với `uint256.max` và giải mã flag tọa độ.
-* **Flags / Targets:** `AUTH=NAPOLEON SETTLEMENT_REFERENCE=SR-4821`, Tọa độ `51.5049,0.0348`.
+* **Scenario:** Dr. Watson disappears after probing mysterious extortion demands linked to the TrustSettle payment desktop app.
+* **Forensic Techniques & Investigation:**
+  * Unpacked and decompiled NSIS/Electron desktop binaries (`TrustSettle 1.0.0.exe`).
+  * Traced background Lua script execution monitoring file system changes via Windows `FILE_NOTIFY_INFORMATION` and network beaconing via `WinHttpSendRequest`.
+  * Interacted with and reverse-engineered the smart contract `X0_Contract.sol` on Ethereum/Polygon, calling `resolveState()` to recover the decryption key.
+  * Inspected malicious Web3 phishing HTML templates (`BrowserProvider`), extracted fraudulent `approve()` transactions targeting `uint256.max`, and decoded coordinate flags.
+* **Key Indicators & Targets:** `AUTH=NAPOLEON SETTLEMENT_REFERENCE=SR-4821`, Coordinates `51.5049,0.0348`.
 
 ---
 
 ### 2. Sherlock 04 — The False Employee (`PaperGhost`)
-* **Bối cảnh:** Nhân viên văn phòng Nội các Clara Voss bị tấn công vật lý qua chiếc USB dán nhãn nội bộ giả mạo `CO-USB-0091`.
-* **Kỹ thuật điều tra:**
-  * Phân tích Registry hives (`SOFTWARE`, `SYSTEM`, `NTUSER.DAT`) và Nhật ký sự kiện Windows (Event Logs).
-  * Xác định thời điểm mount ổ USB Lexar và thực thi payload `update.exe` từ UserAssist.
-  * Điều tra hành vi kích hoạt bí mật microphone (ghi âm 175s) và webcam (stream hình ảnh 127s) của mã độc C2 Agent.
-  * Phục hồi tài liệu bị đánh cắp liên quan đến dự án **DIOGENES**.
+* **Scenario:** Cabinet Office staff Clara Voss is targeted via physical intrusion using a rogue flash drive labeled `CO-USB-0091`.
+* **Forensic Techniques & Investigation:**
+  * Parsed Windows Registry hives (`SOFTWARE`, `SYSTEM`, `NTUSER.DAT`) and Windows Event Logs.
+  * Pinpointed the exact mount timestamp of the Lexar USB drive and payload execution of `update.exe` via UserAssist keys.
+  * Uncovered covert surveillance behaviors of the C2 agent: unauthorized microphone activation (175 seconds audio recording) and webcam streaming (127 seconds capture).
+  * Reconstructed exfiltrated classified documents tied to project **DIOGENES**.
 
 ---
 
 ### 3. Sherlock 05 — Backdoored Repository and Exposed Server (`PoisonedBranch`)
-* **Bối cảnh:** Lập trình viên chính phủ Tom Ainsworth bị cài cắm mã độc chuỗi cung ứng thông qua kho mã nguồn mở nội bộ giả mạo.
-* **Kỹ thuật điều tra:**
-  * Phân tích mã nguồn `ticket_parser.py` và module mã độc ẩn `telemetry.py` (sử dụng thuật toán XOR giữa `diogenes.jpg` và `calibration.bin`).
-  * Trích xuất ELF implant gián điệp chạy ngầm từ `/home/Tom/.cache/.ticket-parser/.integrity` và kênh kết nối C2 `203.0.113.10:31337`.
-  * Điều tra tấn công Known-Plaintext Attack bằng công cụ `bkcrack` đối với kho tài liệu nén `LOOT.zip`.
-  * Khôi phục khóa SSH Private Key của đối tượng đe dọa Sebastian Moran và các tài liệu mật bị exfiltrate.
+* **Scenario:** Government developer Tom Ainsworth is compromised via a poisoned internal dependency from a rogue open-source repository.
+* **Forensic Techniques & Investigation:**
+  * Audited `ticket_parser.py` source code and identified hidden backdoor module `telemetry.py` (rolling XOR decryption between `diogenes.jpg` and `calibration.bin`).
+  * Extracted covert Linux ELF C2 implant from `/home/Tom/.cache/.ticket-parser/.integrity` with callback channel to `203.0.113.10:31337`.
+  * Conducted a Known-Plaintext Attack against encrypted zip archive `LOOT.zip` using `bkcrack`.
+  * Recovered the private SSH key belonging to threat actor Sebastian Moran and retrieved exfiltrated emergency personnel rosters.
 
 ---
 
 ### 4. Sherlock 06 — Silent Passenger (`SilentPassenger`)
-* **Bối cảnh:** Hệ thống IVI thông tin giải trí của xe ô tô (Android Allwinner T3) bị xâm nhập và biến thành trạm chuyển tiếp proxy di động.
-* **Kỹ thuật điều tra:**
-  * Bóc tách ứng dụng hệ thống đặc quyền `/system/priv-app/TWCore/TWCore.apk`.
-  * Phân tích cơ chế cập nhật firmware qua MQTT broker `tcp://mqtt.car.cardoor.cn:1883` với tài khoản `dofun:dofun666666` và topic `dofun/car/config/#`.
-  * Dịch ngược đa tầng mã độc: `jarservice-v1.12.apk` $\to$ `stage2.dex` $\to$ `stage3_sdk.jar` $\to$ C2 plugin `sh66.io`.
-  * Tái dựng thuật toán mã hóa AES-CBC, giải mã cấu hình C2 endpoint, API update và khôi phục tọa độ gián điệp cuối cùng.
-* **Xác thực:** Toàn bộ 20 câu hỏi được kiểm chứng tự động qua script [`verify_all_20.py`](./SilentPassenger/verify_all_20.py).
+* **Scenario:** An In-Vehicle Infotainment (IVI) head unit (Android Allwinner T3) is infiltrated and weaponized into a mobile covert proxy node.
+* **Forensic Techniques & Investigation:**
+  * Audited and decompiled privileged system package `/system/priv-app/TWCore/TWCore.apk`.
+  * Analyzed rogue firmware update mechanisms utilizing MQTT broker `tcp://mqtt.car.cardoor.cn:1883` with credentials `dofun:dofun666666` and topic subscription `dofun/car/config/#`.
+  * Unpacked and analyzed multi-stage malicious payloads: `jarservice-v1.12.apk` $\to$ `stage2.dex` $\to$ `stage3_sdk.jar` $\to$ C2 plugin `sh66.io`.
+  * Reconstructed proprietary AES-CBC encryption routines, decrypted C2 communication endpoints and telemetry update APIs, and recovered final geolocation tracks.
+* **Validation:** All 20 challenge questions independently verified via [`verify_all_20.py`](./SilentPassenger/verify_all_20.py).
 
 ---
 
 ### 5. Sherlock 07 — Mission Vault (`IronFeather`)
-* **Bối cảnh:** Thiết bị bay Quadcopter giám sát bị rơi tự do trên bầu trời London do bị kẻ tấn công can thiệp qua MAVLink.
-* **Kỹ thuật điều tra:**
-  * Dịch ngược tệp nhị phân điều khiển bay `px4` (PX4 Autopilot).
-  * Khôi phục thuật toán giải mã và giải mã thành công nhật ký hành trình `flight.ulg.encrypted` cùng cơ sở dữ liệu `dataman.encrypted`.
-  * Phân tích dữ liệu cảm biến bay (GPS, Gyro, Actuators) bằng bộ script Python tự viết (`calc_distance.py`, `find_crash.py`,...).
-  * Xác định chính xác vị trí thả hàng tại waypoint 10, điểm rơi tại đường Knightsbridge và mã lệnh can thiệp `MAV_CMD_INJECT_FAILURE`.
+* **Scenario:** An autonomous surveillance quadcopter experiences catastrophic mid-air motor failure over London due to malicious MAVLink command injection.
+* **Forensic Techniques & Investigation:**
+  * Reverse-engineered the core flight control binary `px4` (PX4 Autopilot).
+  * Extracted custom crypto routines to decrypt the encrypted flight telemetry log `flight.ulg.encrypted` and mission storage `dataman.encrypted`.
+  * Processed flight sensor streams (GPS, IMU Gyro, Actuators) using custom Python parsing scripts (`calc_distance.py`, `find_crash.py`).
+  * Pinpointed drop-off coordinates at Waypoint 10, ground impact on Knightsbridge, and malicious command `MAV_CMD_INJECT_FAILURE`.
 
 ---
 
-## 🛠️ Cấu trúc thư mục sau khi dọn dẹp (Workspace Structure)
+## 💻 Tech Stack & Tooling
 
-Workspace đã được dọn dẹp sạch sẽ các tệp trích xuất tạm và rác dung lượng lớn (giải phóng hơn **2.1 GB** bộ nhớ):
-- Các tệp `.img`, tệp giải nén trùng lặp hàng trăm MB (`system.img`, `Tom_extracted`, `uac_extracted`, `extracted_sandbox`, bộ công cụ `jadx`, `bkcrack`...) đã được dọn dẹp.
-- Giữ lại nguyên vẹn toàn bộ:
-  - File đề bài gốc (`.pdf`, `.zip` gốc cần thiết).
-  - Các tệp kịch bản giải mã Python (`*.py`), hợp đồng thông minh (`*.sol`).
-  - Các bài viết giải trình chi tiết chuẩn mực (`writeup.md`) trong từng thư mục.
+* **Digital Forensics:** Autopsy, Volatility 3, UAC (Unix-like Artifact Collector), KAPE, Registry Explorer, Event Viewer.
+* **Reverse Engineering:** Ghidra, JADX, IDA Pro, Python (`pypdfium2`, `scapy`, `pycryptodome`).
+* **Cryptanalysis:** `bkcrack`, Hashcat, CyberChef, Web3.py.
+* **Vehicle & Drone Telemetry:** PX4 ULog Tools, PlotJuggler, MAVLink Inspector.
