@@ -1,0 +1,20 @@
+# Tạm thời bỏ qua các thử thách chưa có writeup / đang giải
+BottleOut/
+WhisperChain/
+
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

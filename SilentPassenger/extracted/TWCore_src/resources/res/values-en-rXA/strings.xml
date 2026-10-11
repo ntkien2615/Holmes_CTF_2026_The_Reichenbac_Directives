@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">[ŢŴÇöŕé one two]</string>
+    <string name="default_province">[广东 one]</string>
+    <string name="up_log">[上传日志 one]</string>
+    <string name="up_log_ing">[正在上传日志 one two]</string>
+    <string name="up_log_failure">[上传失败，请检查网络 one two]</string>
+    <string name="up_log_success">[上传成功 one]</string>
+    <string name="open_gps">[打开ĝþš one]</string>
+    <string name="close_gps">[关闭ĝþš one]</string>
+</resources>

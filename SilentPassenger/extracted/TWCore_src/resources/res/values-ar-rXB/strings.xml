@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">‏‮TWCore‬‏</string>
+    <string name="default_province">‏‮广东‬‏</string>
+    <string name="up_log">‏‮上传日志‬‏</string>
+    <string name="up_log_ing">‏‮正在上传日志‬‏</string>
+    <string name="up_log_failure">‏‮上传失败，请检查网络‬‏</string>
+    <string name="up_log_success">‏‮上传成功‬‏</string>
+    <string name="open_gps">‏‮打开gps‬‏</string>
+    <string name="close_gps">‏‮关闭gps‬‏</string>
+</resources>

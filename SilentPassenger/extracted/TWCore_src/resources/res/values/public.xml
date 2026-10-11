@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="mipmap" name="ic_launcher" id="0x7f020000" />
+    <public type="mipmap" name="ic_message" id="0x7f020001" />
+    <public type="mipmap" name="ic_upgrade" id="0x7f020002" />
+    <public type="layout" name="layout_main_activity" id="0x7f030000" />
+    <public type="layout" name="layout_notification" id="0x7f030001" />
+    <public type="xml" name="provider_paths" id="0x7f040000" />
+    <public type="string" name="app_name" id="0x7f050000" />
+    <public type="string" name="default_province" id="0x7f050001" />
+    <public type="string" name="up_log" id="0x7f050002" />
+    <public type="string" name="up_log_ing" id="0x7f050003" />
+    <public type="string" name="up_log_failure" id="0x7f050004" />
+    <public type="string" name="up_log_success" id="0x7f050005" />
+    <public type="string" name="open_gps" id="0x7f050006" />
+    <public type="string" name="close_gps" id="0x7f050007" />
+    <public type="array" name="province_location_array" id="0x7f060000" />
+    <public type="style" name="AppBaseTheme" id="0x7f070000" />
+    <public type="style" name="AppTheme" id="0x7f070001" />
+    <public type="id" name="iv_notify_icon" id="0x7f080000" />
+    <public type="id" name="view_center" id="0x7f080001" />
+    <public type="id" name="tv_notify_title" id="0x7f080002" />
+    <public type="id" name="tv_notify_content" id="0x7f080003" />
+    <public type="id" name="tv_notify_time" id="0x7f080004" />
+</resources>

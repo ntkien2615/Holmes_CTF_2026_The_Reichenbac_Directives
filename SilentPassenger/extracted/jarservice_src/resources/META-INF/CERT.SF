@@ -1,0 +1,47 @@
+Signature-Version: 1.0
+Created-By: Android Gradle 7.2.2
+SHA-256-Digest-Manifest: gO4JyJV3M9k32PV0bxn67J+QA0uxOljOuraL3X9+GXQ=
+X-Android-APK-Signed: 2
+
+Name: AndroidManifest.xml
+SHA-256-Digest: FCnXTvDMhfbFe7d2TkQ537V8e2zmoK2VIzyaYGOMYHo=
+
+Name: META-INF/com/android/build/gradle/app-metadata.properties
+SHA-256-Digest: QVM2DGvWMO3yl5U4bxcLHPjQkVj6cl7rZ4jpXyDcfDw=
+
+Name: classes.dex
+SHA-256-Digest: lolcD1cAnIJ8WOhoReVeTz9MONrq7OKlm67YSjSuNU8=
+
+Name: res/7B.xml
+SHA-256-Digest: 6DVG2MEKSfqLkEiUnScXEXXmz8VDCN9fKNbn2pXiUVw=
+
+Name: res/JU.png
+SHA-256-Digest: KE8vJjWqjWWRrwHWsi+KWFZFiLyCa/+fhH3otF9nPm0=
+
+Name: res/RX.png
+SHA-256-Digest: rJt3SAl0QySYwsLS9zTMDTsJP8BiePzUqqFTlYAHDU0=
+
+Name: res/Vw.png
+SHA-256-Digest: 5qExv6yhX5AnPh7RY0+BwOEjTxeWFT4ekET2679POVo=
+
+Name: res/WR.png
+SHA-256-Digest: mzg69rp/4gumf4l6zuW5qvqOHOe6X6mVe/9YYF5CA5o=
+
+Name: res/YB.webp
+SHA-256-Digest: Ba+AfgEDnFt54SwOZqUJPJFzzJydWxbJGYtpv09/FDM=
+
+Name: res/fM.png
+SHA-256-Digest: 3bkMCWleb29dTWQyv1DQSX2YArEIg0WtRF5mJVf3LS8=
+
+Name: res/fR.png
+SHA-256-Digest: ZhA/o4i6kk28LM9gteLVAn0VBKjvrUixQ6ZoZWxj9Ls=
+
+Name: res/fW.xml
+SHA-256-Digest: NBT0zQUcvTUv/OjTbc9NHJvsJvJtsrFeaIFQUZ2EDns=
+
+Name: res/lN.xml
+SHA-256-Digest: HBlWosVnJKfIIsxPYTSMh8Xsj/vkaNtIwb0ZVLqPtlQ=
+
+Name: resources.arsc
+SHA-256-Digest: l/xy/aKxeHi+J62KD2PugA9PTmDpQaA2XRtdT7ds5Ns=
+

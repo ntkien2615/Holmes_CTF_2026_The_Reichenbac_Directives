@@ -1,0 +1,122 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA1-Digest-Manifest: us8VynbAzXFzK8hAHj4ddBSEk0w=
+X-Android-APK-Signed: 2
+
+Name: AndroidManifest.xml
+SHA1-Digest: igcSwI1+3mlEPGooE+6Csi6lCt4=
+
+Name: META-INF/maven/org.eclipse.paho/org.eclipse.paho.client.mqttv3/p
+ om.properties
+SHA1-Digest: pkxuOQmY+EDMfnH6f/hLUGWRya8=
+
+Name: META-INF/maven/org.eclipse.paho/org.eclipse.paho.client.mqttv3/p
+ om.xml
+SHA1-Digest: 6ZJJkwyHLYZq4V5no0yPxRY/BQ8=
+
+Name: about.html
+SHA1-Digest: JIcugPUIQTQyBzS3KRNrco9xMsw=
+
+Name: bundle.properties
+SHA1-Digest: glnIEdspoGI8PyubO1K6UXdteVw=
+
+Name: classes.dex
+SHA1-Digest: TBlW2KivUT754DTppUW59ZGw7LM=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/logcat.properties
+SHA1-Digest: ry27eg7w2Twq3wLlr3xDSr+rcTU=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages.properties
+SHA1-Digest: 6u8HIaWYq3DWHFNHCegNk0i4w2w=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_cs.properti
+ es
+SHA1-Digest: Cn3BAkQf0SH/6TbaoHQ1PoCNcKI=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_de.properti
+ es
+SHA1-Digest: J0/sC1C6/yl7AniMz9U6QkkkjsQ=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_es.properti
+ es
+SHA1-Digest: AeWD/1zLmbP6DlqTKdgmv+bXAUg=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_fr.properti
+ es
+SHA1-Digest: 3P+tFq1BOLMDBHrNOaBPnmylzAo=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_hu.properti
+ es
+SHA1-Digest: lY1aK4sBCeIwNsrg5nIM/H3ErpI=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_it.properti
+ es
+SHA1-Digest: bquFA+E1Iv/vamA8CBT+ZWhZtUU=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_ja.properti
+ es
+SHA1-Digest: LnYMbHq8hY1udABSvLuD8YjCY7M=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_ko.properti
+ es
+SHA1-Digest: oWYtA5IN/lfTKLF67uk9HdPVb/Y=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_pl.properti
+ es
+SHA1-Digest: K/x0W3w9a8cEPBKAhvdumCUCEVo=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_pt_BR.prope
+ rties
+SHA1-Digest: WX9A6pC6NesSQcvX+6OMWzAHtGE=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_ru.properti
+ es
+SHA1-Digest: B57zIEwWbsR86nrD877Ew/tp1Qc=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_zh_CN.prope
+ rties
+SHA1-Digest: RZIqvrMd4ArjstPzVV5sPxIiWuY=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_zh_TW.prope
+ rties
+SHA1-Digest: KeAw6niBTrzUvKUGHspPc5UAmKk=
+
+Name: org/eclipse/paho/client/mqttv3/logging/jsr47min.properties
+SHA1-Digest: 3cxTlbEmHkHKSvYIcSKinKJ4qC8=
+
+Name: org/eclipse/paho/client/mqttv3/logging/package.html
+SHA1-Digest: QZzgchehKDCpmmZ5Sl+OY4KPSRk=
+
+Name: org/eclipse/paho/client/mqttv3/package.html
+SHA1-Digest: Z1gZng+1KhlSI7SqLbyBw9aK3eI=
+
+Name: org/eclipse/paho/client/mqttv3/persist/package.html
+SHA1-Digest: 9GyaDIiyYdmkY/hREYtXmtv4laM=
+
+Name: org/eclipse/paho/client/mqttv3/util/package.html
+SHA1-Digest: wNJfvjaHeA+ZJCnISRWd2wQmsyU=
+
+Name: res/layout/layout_main_activity.xml
+SHA1-Digest: JWtDd5hHsJerKsI8lA76QftFvw8=
+
+Name: res/layout/layout_notification.xml
+SHA1-Digest: ox89ODRAehRJAGQ1hFEV+tNZpsU=
+
+Name: res/mipmap-hdpi-v4/ic_launcher.png
+SHA1-Digest: 7rQl6EYeTTp31EHiQqxTWNvHumI=
+
+Name: res/mipmap-hdpi-v4/ic_message.png
+SHA1-Digest: TWBbBN5tcg+sxlYq7enbD5QWYH4=
+
+Name: res/mipmap-hdpi-v4/ic_upgrade.png
+SHA1-Digest: PPHyD4bPIZax4cbTwQ+8BoLPrnY=
+
+Name: res/mipmap-mdpi-v4/ic_launcher.png
+SHA1-Digest: eAe4aQ3DNPRP6pSEW0HgZPPU5nE=
+
+Name: res/xml/provider_paths.xml
+SHA1-Digest: vyrkg1j7Yu5rXHr+ALAo/3osfrk=
+
+Name: resources.arsc
+SHA1-Digest: ZespjWNx8DiQVkF9+CbCI2089iM=
+
